@@ -18,6 +18,14 @@ app.get('/response', (req,res) => {
     })
 })
 
+app.get('/data', (req,res) => {
+    res.json({
+        nama: 'Jokowi',
+        alamat: 'Solo',
+        profesi: 'Menggemaskan'
+    })
+})
+
 app.listen(PORT, () => {
   console.log(`Server berjalan di http://localhost:${PORT}`);
 });
