@@ -10,6 +10,14 @@ app.get('/cinta', (req,res) => {
     res.send('No Cinta')
 })
 
+app.get('/response', (req,res) => {
+    res.json({
+        method: req.method,
+        url: req.url,
+        headers: req.headers
+    })
+})
+
 app.listen(PORT, () => {
   console.log(`Server berjalan di http://localhost:${PORT}`);
 });
